@@ -1,5 +1,5 @@
 // 1º Instalar e autenticar api do Blogger 
-//
+
 
 'use strict'
 
@@ -18,11 +18,11 @@ const arquivo_json = JSON.parse(json_data)
 //parte de teste que peguei no git
 const blogger = google.blogger({
     version: 'v3',
-    auth: arquivo_json.minha_api
+    auth: arquivo_json.api
   })
   
   const params = {
-    blogId: "6916440918227175948"
+    blogId: arquivo_json.blogger_id
   }
   
   //depois só alterar o metódo para inserir post e montar o corpo da postagem
